@@ -26,9 +26,7 @@ class ContractController
             $html .= '<tr>';
             $html .= '<td>' . htmlspecialchars($contract['id']) . '</td>';
             $html .= '<td>' . htmlspecialchars($contract['nazwa_przedsiebiorcy']);
-            if (isset($contract['kwota']) && $contract['kwota'] > 5) {
-                $html .= ' ' . htmlspecialchars($contract['kwota']);
-            }
+            $akcja === 5 ? $html .= ' ' . htmlspecialchars($contract['kwota']) : null;
             $html .= '</td></tr>';
         }
         $html .= '</table></body></html>';
